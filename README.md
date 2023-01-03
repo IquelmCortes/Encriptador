@@ -5,7 +5,7 @@ Por medio de esta aplicación planeo mostrar mis aptitudes hasta el momento en e
 
 La aplicación busca verse de manera correcta en dispositivos móviles, tabletas y computadores, cumpliendo así el diseño responsive y empleando la filosofía "first mobile".
 
-Por favor ingrese texto sin acentos ni caracteres especiale.
+Por favor ingrese texto sin acentos ni caracteres especiales.
 
 El diseño de esta página responde al recomendado por alura con unos pequeños cambios que creo que son parte de la mejora.
 

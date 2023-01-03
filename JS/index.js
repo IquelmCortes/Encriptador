@@ -27,10 +27,22 @@ function vaciar() {
 function encriptar() {
     var texto = $("#EText").val();
     if (texto != "") {
-        if (texto.includes("á") || texto.includes("é") || texto.includes("í") || texto.includes("ó") || texto.includes("ú") || texto.includes("/") || texto.includes("@") || texto.includes("#") || texto.includes("$") || texto.includes("%") || texto.includes("!") || texto.includes("¡") || texto.includes("?") || texto.includes("¿")) {
+        if (texto.includes("á") || texto.includes("é") || texto.includes("í") || texto.includes("ó") || texto.includes("ú")) {
             document.getElementById("bg-modal").style.display = "flex";
             document.getElementById("modal-text").innerHTML = "No puede ingresar acentos";
             document.getElementById("advertencia").style.color = "red"
+            document.getElementById("transcription").style.display = "none";
+            document.getElementById("avatar").style.display = "initial";
+            document.getElementById("not-found").style.display = "initial";
+            document.getElementById("enter-text").style.display = "initial";
+        }else if(texto.includes("/") || texto.includes("@") || texto.includes("#") || texto.includes("$") || texto.includes("%") || texto.includes("&") || texto.includes("=") || texto.includes("-") || texto.includes("_")){
+            document.getElementById("bg-modal").style.display = "flex";
+            document.getElementById("modal-text").innerHTML = "No puede ingresar signos";
+            document.getElementById("advertencia").style.color = "red"
+            document.getElementById("transcription").style.display = "none";
+            document.getElementById("avatar").style.display = "initial";
+            document.getElementById("not-found").style.display = "initial";
+            document.getElementById("enter-text").style.display = "initial";
         } else {
             document.getElementById("avatar").style.display = "none";
             document.getElementById("not-found").style.display = "none";
@@ -54,10 +66,22 @@ function encriptar() {
 function desencriptar() {
     var texto = $("#EText").val();
     if (texto != "") {
-        if (texto.includes("á") || texto.includes("é") || texto.includes("í") || texto.includes("ó") || texto.includes("ú") || texto.includes("/") || texto.includes("@") || texto.includes("#") || texto.includes("$") || texto.includes("%") || texto.includes("!") || texto.includes("¡") || texto.includes("?") || texto.includes("¿")) {
+        if (texto.includes("á") || texto.includes("é") || texto.includes("í") || texto.includes("ó") || texto.includes("ú")) {
             document.getElementById("bg-modal").style.display = "flex";
             document.getElementById("modal-text").innerHTML = "No puede ingresar acentos";
             document.getElementById("advertencia").style.color = "red"
+            document.getElementById("transcription").innerHTML = "none";
+            document.getElementById("avatar").style.display = "initial";
+            document.getElementById("not-found").style.display = "initial";
+            document.getElementById("enter-text").style.display = "initial";
+        } else if(texto.includes("/") || texto.includes("@") || texto.includes("#") || texto.includes("$") || texto.includes("%") || texto.includes("&") || texto.includes("=") || texto.includes("-") || texto.includes("_")){
+            document.getElementById("bg-modal").style.display = "flex";
+            document.getElementById("modal-text").innerHTML = "No puede ingresar signos";
+            document.getElementById("advertencia").style.color = "red"
+            document.getElementById("transcription").style.display = "none";
+            document.getElementById("avatar").style.display = "initial";
+            document.getElementById("not-found").style.display = "initial";
+            document.getElementById("enter-text").style.display = "initial";
         } else {
             document.getElementById("avatar").style.display = "none";
             document.getElementById("not-found").style.display = "none";
